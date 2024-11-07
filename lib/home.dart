@@ -1,3 +1,4 @@
+import 'package:fitnessappui/components/categorycards.dart';
 import 'package:fitnessappui/components/searchbar.dart';
 import 'package:fitnessappui/components/topcards.dart';
 import 'package:flutter/material.dart';
@@ -55,7 +56,31 @@ class Home extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
+            Container(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "Top Workout 💯 ",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
             Topcards(),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "Categories 👉",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Categorycards(),
           ],
         ),
       ),

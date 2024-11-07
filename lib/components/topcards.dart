@@ -161,7 +161,8 @@ class Topcards extends StatelessWidget {
                 ],
               ),
             ),
-          ), // ,
+          ),
+          const SizedBox(width: 20), // ,
         ],
       ),
     );
