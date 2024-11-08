@@ -106,6 +106,53 @@ class Categorycards extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(
+            width: 20,
+          ),
+          Column(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                child: Container(
+                  height: 200,
+                  width: 170,
+                  decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 210, 209, 208)),
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        child: Image.network(
+                          "https://www.pngarts.com/files/6/Male-Fitness-PNG-Download-Image.png",
+                          fit: BoxFit.cover,
+                          height:
+                              300, // Ensures the image covers the card completely
+                          alignment: Alignment.center,
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 10,
+                        left: 10,
+                        child: TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              "Functional Training",
+                              style:
+                                  TextStyle(fontSize: 15, color: Colors.white),
+                            ),
+                            style: TextButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10)),
+                              backgroundColor:
+                                  const Color.fromARGB(255, 35, 20, 71),
+                              padding: EdgeInsets.all(10),
+                            )),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );

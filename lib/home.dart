@@ -1,3 +1,4 @@
+import 'package:fitnessappui/bottomnav.dart';
 import 'package:fitnessappui/components/categorycards.dart';
 import 'package:fitnessappui/components/searchbar.dart';
 import 'package:fitnessappui/components/topcards.dart';
@@ -45,45 +46,50 @@ class Home extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 20,
+      body: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 20,
+                ),
+                SearchbarItem(),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    "Top Workout 💯 ",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Topcards(),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    "Categories 👉",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Categorycards(),
+              ],
             ),
-            SearchbarItem(),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              alignment: Alignment.topLeft,
-              child: Text(
-                "Top Workout 💯 ",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Topcards(),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              alignment: Alignment.topLeft,
-              child: Text(
-                "Categories 👉",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Categorycards(),
-          ],
-        ),
+          ),
+        ],
       ),
+      bottomNavigationBar: Bottomnav(),
     );
   }
 }
