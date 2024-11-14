@@ -1,31 +1,29 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class Categorycards extends StatelessWidget {
-  Categorycards({super.key});
+  const Categorycards({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 300,
+      height: 200,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [
           Column(
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(20)),
+                borderRadius: const BorderRadius.all(Radius.circular(20)),
                 child: Container(
                   height: 200,
                   width: 170,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       color: const Color.fromARGB(255, 210, 209, 208)),
                   child: Stack(
                     children: [
                       Positioned(
                         child: Image.network(
-                          "https://pngimg.com/uploads/yoga/yoga_PNG19.png",
+                          "https://www.pngarts.com/files/6/Male-Fitness-PNG-Download-Image.png",
                           fit: BoxFit.cover,
                           height:
                               200, // Ensures the image covers the card completely

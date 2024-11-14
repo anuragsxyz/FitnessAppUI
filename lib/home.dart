@@ -1,5 +1,6 @@
 import 'package:fitnessappui/bottomnav.dart';
 import 'package:fitnessappui/components/categorycards.dart';
+import 'package:fitnessappui/components/recipes.dart';
 import 'package:fitnessappui/components/searchbar.dart';
 import 'package:fitnessappui/components/topcards.dart';
 import 'package:flutter/material.dart';
@@ -84,6 +85,21 @@ class Home extends StatelessWidget {
                   height: 10,
                 ),
                 Categorycards(),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    "Recipes 👉",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                RecipesCard(),
+               
               ],
             ),
           ),
